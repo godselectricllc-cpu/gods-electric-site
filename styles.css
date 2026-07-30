@@ -325,6 +325,149 @@ img {
 	outline-offset: 2px;
 }
 
+.feedback-container {
+	max-width: 640px;
+}
+
+.feedback-form {
+	display: grid;
+	gap: 1.25rem;
+	margin-top: 1.5rem;
+}
+
+.form-field {
+	display: grid;
+	gap: 0.5rem;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.form-label,
+.star-rating-field legend {
+	font-size: 0.9rem;
+	color: var(--muted);
+}
+
+.form-input,
+.form-textarea {
+	width: 100%;
+	padding: 0.85rem 1rem;
+	border-radius: var(--radius);
+	border: 1px solid rgba(245, 196, 81, 0.25);
+	background: rgba(5, 5, 9, 0.85);
+	color: var(--text);
+	font: inherit;
+}
+
+.form-textarea {
+	resize: vertical;
+	min-height: 140px;
+	line-height: 1.5;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+	color: rgba(160, 160, 181, 0.85);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+	outline: 2px solid rgba(245, 196, 81, 0.45);
+	outline-offset: 2px;
+}
+
+.inline-link {
+	color: var(--gold);
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+.inline-link:hover {
+	color: var(--text);
+}
+
+.star-rating {
+	display: inline-flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	gap: 0.25rem;
+}
+
+.star-rating input {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.star-rating label {
+	cursor: pointer;
+	font-size: 2rem;
+	line-height: 1;
+	color: rgba(160, 160, 181, 0.45);
+	transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+	color: var(--gold);
+}
+
+.star-rating label:hover {
+	transform: scale(1.08);
+}
+
+.testimonial-rating {
+	display: flex;
+	gap: 0.15rem;
+	margin-bottom: 0.75rem;
+}
+
+.testimonial-rating .star {
+	font-size: 1.1rem;
+	line-height: 1;
+	color: rgba(160, 160, 181, 0.45);
+}
+
+.testimonial-rating .star.filled {
+	color: var(--gold);
+}
+
+.feedback-card {
+	background: linear-gradient(180deg, rgba(17, 17, 26, 0.95), rgba(10, 10, 18, 0.95));
+	border: 1px solid rgba(245, 196, 81, 0.14);
+	border-radius: 16px;
+	padding: 1.5rem;
+	box-shadow: var(--shadow-soft);
+}
+
+.feedback-card p {
+	color: var(--muted);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.feedback-service {
+	display: block;
+	margin-top: 0.75rem;
+	font-size: 0.85rem;
+	color: rgba(160, 160, 181, 0.85);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
 @media (max-width: 720px) {
 	.nav-container {
 		justify-content: center;
